@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="src/css/style.css">
     <title>Alef</title>
 </head>
@@ -26,7 +27,7 @@
                     <ul>
                         <li class="nav-link"><img src="src/images/person.svg" alt="person-logo"></li>
                         <li class="nav-link"><img src="src/images/bag.svg" alt="bag-logo"></li>
-                        <li class="nav-link"><img src="src/images/favorite.svg" alt="favarite0logo"></li>
+                        <li class="nav-link"><img src="src/images/favorite.svg" alt="favaritelogo"></li>
                     </ul>
                 </nav>
             </section>
@@ -40,38 +41,30 @@
                     <div class="main__display-center">
                         <div class="main__display-left">
                             <!-- slider -->
-                            <div class="sliderBig">
-                                <div class="sliderBig__item">
-                                    <img src="src/images/slider/1.png" alt="">
-                                </div>
-                                <div class="sliderBig__item">
-                                    <img src="src/images/slider/2.png" alt="">
-                                </div>
-                                <div class="sliderBig__item">
-                                    <img src="src/images/slider/3.png" alt="">
-                                </div>
-                                <div class="sliderBig__item">
-                                    <img src="src/images/slider/4.png" alt="">
-                                </div>
-                                <div class="sliderBig__item">
-                                    <img src="src/images/slider/5.png" alt="">
-                                </div>
-                            </div>
-                            <div class="slider">
-                                <div class="slider__item" data-item="1">
-                                    <img src="src/images/slider/preview1.png" alt="">
-                                </div>
-                                <div class="slider__item" data-item="2">
-                                    <img src="src/images/slider/preview2.png" alt="">
-                                </div>
-                                <div class="slider__item" data-item="3">
-                                    <img src="src/images/slider/preview3.png" alt="">
-                                </div>
-                                <div class="slider__item" data-item="4">
-                                    <img src="src/images/slider/preview4.png" alt="">
-                                </div>
-                                <div class="slider__item" data-item="5">
-                                    <img src="src/images/slider/preview5.png" alt="">
+                            <div class="card">
+                                <div class="card-slider">
+                                    <div class="card-slider__nav slider__nav">
+                                        <div class="slider__nav-item"><img src="src/images/slider/preview1.png" alt="">
+                                        </div>
+                                        <div class="slider__nav-item"><img src="src/images/slider/preview2.png" alt="">
+                                        </div>
+                                        <div class="slider__nav-item"><img src="src/images/slider/preview3.png" alt="">
+                                        </div>
+                                        <div class="slider__nav-item"><img src="src/images/slider/preview4.png" alt="">
+                                        </div>
+                                        <div class="slider__nav-item">
+                                            <img src="src/images/slider/preview5.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card-slider__block slider__block">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide"><img src="src/images/slider/1.png" alt=""></div>
+                                            <div class="swiper-slide"><img src="src/images/slider/2.png" alt=""></div>
+                                            <div class="swiper-slide"><img src="src/images/slider/3.png" alt=""></div>
+                                            <div class="swiper-slide"><img src="src/images/slider/4.png" alt=""></div>
+                                            <div class="swiper-slide"><img src="src/images/slider/5.png" alt=""></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -136,11 +129,13 @@
                                         <div class="current">1</div>
                                         <button class="minus-btn">-</button>
                                     </div>
-
-                                    <button class="add-btn">Добавить в корзину</button>
-                                    <div class="favorite-btn">
-                                        <img src="src/images/favorite-white.svg" alt="">
+                                    <div class="btn-block">
+                                        <button class="add-btn">Добавить в корзину</button>
+                                        <div class="favorite-btn">
+                                            <img src="src/images/favorite-white.svg" alt="">
+                                        </div>
                                     </div>
+
                                 </div>
                                 <div class="block-link">
                                     <a class="link-text" href="#">Купить в 1 клик</a>
@@ -207,45 +202,48 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__wrap">
+                <div class="footer__left">
+                    <div class="footer__clients">
+                        <div class="footer-title">
+                            покупателям
+                        </div>
+                        <div class="footer__list">
+                            <ul>
+                                <li>Каталог</li>
+                                <li>Акции</li>
+                                <li>Бренды</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__about">
+                        <div class="footer-title">
+                            о нас
+                        </div>
+                        <div class="footer__list">
+                            <ul>
+                                <li>О компании</li>
+                                <li>Новости</li>
+                                <li>Команда</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__right">
+                    <div class="footer__mail">
+                        <div class="footer-title">
+                            Узнайте первыми о новинках и акциях
+                        </div>
+                        <div class="footer__subcribe">
+                            <input class="footer__input" type="mail" placeholder="Адрес электронной почты">
+                            <button class="footer__btn">Подписаться</button>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="footer__clients">
-                    <div class="footer-title">
-                        покупателям
-                    </div>
-                    <div class="footer__list">
-                        <ul>
-                            <li>Каталог</li>
-                            <li>Акции</li>
-                            <li>Бренды</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer__about">
-                    <div class="footer-title">
-                        о нас
-                    </div>
-                    <div class="footer__list">
-                        <ul>
-                            <li>О компании</li>
-                            <li>Новости</li>
-                            <li>Команда</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer__mail">
-                    <div class="footer-title">
-                        Узнайте первыми о новинках и акциях
-                    </div>
-                    <div class="footer__subcribe">
-                        <input class="footer__input" type="mail" placeholder="Адрес электронной почты">
-                        <button class="footer__btn">Подписаться</button>
-                    </div>
-                </div>
             </div>
         </div>
     </footer>
-    <script src="src/js/jquery-3.6.0.min.js"></script>
-    <script src="src/js/slick.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="src/js/index.js"></script>
 </body>
 

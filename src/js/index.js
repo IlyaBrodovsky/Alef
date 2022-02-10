@@ -1,59 +1,20 @@
-// Header
+// slider 
 
-$(function () {
-  let header = $("#header");
-  let headerH = header.innerHeight();
-  let scrollPos = $(window).scrollTop();
-  let nav = $(".item-list");
-  let navToggle = $("#navToggle");
-
-  checkScroll(scrollPos, headerH);
-
-  $(window).on("scroll resize", function () {
-    let headerH = header.innerHeight();
-
-    scrollPos = $(this).scrollTop();
-
-    checkScroll(scrollPos, headerH);
-  });
-
-  function checkScroll(scrollPos, headerH) {
-    if (scrollPos > headerH) {
-      header.addClass("fixed");
-    } else {
-      header.removeClass("fixed");
-    }
-  }
-  // Menu
-  navToggle.on("click", function (event) {
-    event.preventDefault();
-
-    nav.toggleClass("show");
-  });
+const swiper = new Swiper(".slider__block", {
+  slidesPerView: 1,
 });
 
-// Slider
+const sliderNavItems = document.querySelectorAll('.slider__nav-item')
 
-$(document).ready(function () {
-  $(".slider").slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    asNavFor: ".sliderBig",
-    centerMode: true,
-    focusOnSelect: true,
-  });
+sliderNavItems.forEach((el, index) => {
+  el.setAttribute('data-index', index)
 
-  $(".sliderBig").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: ".slider",
-    adaptiveHeight: false,
-    adaptiveWidth: true,
-  });
-});
+  el.addEventListener('click', (e) => {
+      const index = parseInt(e.currentTarget.dataset.index);
+      swiper.slideTo(index)
+  })
 
+})
 
 // Select
 let select = function () {
