@@ -17,6 +17,19 @@ window.addEventListener('scroll', () => {
 
   lastScroll = scrollPosition()
 })
+// burger 
+const burger = document.querySelector('[data-burger]');
+const navList = document.querySelector('[data-nav]');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('burger-active');
+  
+  navList.classList.toggle('nav-visible')
+  navList.classList.toggle('nav-active')
+})
+
+
+
 
 // slider 
 const swiper = new Swiper(".slider__block", {
