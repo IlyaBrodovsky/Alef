@@ -16,6 +16,81 @@
 </head>
 
 <body>
+    <!-- sprite -->
+    <svg display="none">
+        <symbol id="person" viewBox="0 0 24 24">
+            <g>
+                <circle cx="12.4595" cy="8.18919" r="3.68919" stroke="#333333" />
+                <path d="M4.5 19.3379H19.5" stroke="#333333" />
+                <path d="M4.5 19.84C4.5 16.4347 8.84699 13.9134 12.2143 14.0023C15.4328 14.0872 19.5 16.4347 19.5 19.84"
+                    stroke="#333333" />
+            </g>
+        </symbol>
+        <symbol id="bag" viewBox="0 0 24 24">
+            <g>
+                <path
+                    d="M5.25468 10.5659C5.13958 9.11201 6.2884 7.86865 7.74689 7.86865H16.2531C17.7116 7.86865 18.8604 9.11201 18.7453 10.566L18.2203 17.1975C18.1174 18.4977 17.0323 19.5002 15.7281 19.5002H8.27189C6.96769 19.5002 5.88261 18.4977 5.77968 17.1975L5.25468 10.5659Z"
+                    stroke="#333333" />
+                <path d="M7.99999 12.5C7.99999 12.5 7.78329 4 12 4C16.2167 4 16 12.5 16 12.5" stroke="#333333" />
+            </g>
+        </symbol>
+        <symbol id="favorite" viewBox="0 0 24 24">
+            <g>
+                <path
+                    d="M11.9 7.0948C10.6998 1.47892 1.40881 5.90389 5.76037 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908"
+                    stroke="#333333" />
+                <path
+                    d="M11.8941 7.0948C13.0944 1.47892 22.7304 5.90389 18.3789 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5"
+                    stroke="#333333" />
+                <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="#333333" />
+            </g>
+        </symbol>
+        <symbol id="star-fill" viewBox="0 0 12 12">
+            <g>
+                <path
+                    d="M6 8.635L9.09 10.5L8.27 6.985L11 4.62L7.405 4.315L6 1L4.595 4.315L1 4.62L3.73 6.985L2.91 10.5L6 8.635Z"
+                    fill="#333333" />
+            </g>
+        </symbol>
+        <symbol id="star-stroke" viewBox="0 0 12 12">
+            <g>
+                <path
+                    d="M6 3.565L6.485 4.71L6.72 5.265L7.32 5.315L8.555 5.42L7.615 6.235L7.16 6.63L7.295 7.22L7.575 8.425L6.515 7.785L6 7.465L5.485 7.775L4.425 8.415L4.705 7.21L4.84 6.62L4.385 6.225L3.445 5.41L4.68 5.305L5.28 5.255L5.515 4.7L6 3.565ZM6 1L4.595 4.315L1 4.62L3.73 6.985L2.91 10.5L6 8.635L9.09 10.5L8.27 6.985L11 4.62L7.405 4.315L6 1Z"
+                    fill="#333333" />
+            </g>
+        </symbol>
+        <symbol id="favorite-white" viewBox="0 0 24 24">
+            <g>
+                <path
+                    d="M11.9 7.0948C10.6998 1.47892 1.40881 5.90389 5.76037 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908"
+                    stroke="white" />
+                <path
+                    d="M11.8941 7.0948C13.0944 1.47892 22.7304 5.90389 18.3789 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5"
+                    stroke="white" />
+                <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white" />
+            </g>
+        </symbol>
+        <symbol id="bag-white" viewBox="0 0 32 35">
+            <g>
+                <path d="M3.24451 8.2998H28.7555C30.2133 8.2998 31.3618 9.54198 31.2478 10.9953L29.5851 32.1953C29.4831 33.4962 28.3976 34.4998 27.0927 34.4998H4.90725C3.60235 34.4998 2.51694 33.4962 2.41491 32.1953L0.752161 10.9953C0.638177 9.54198 1.78674 8.2998 3.24451 8.2998Z" stroke="white"/>
+                <path d="M7.004 18.4857C7.004 18.4857 6.54373 1 15.5 1C24.4563 1 23.996 18.4857 23.996 18.4857" stroke="white"/>
+            </g>
+        </symbol>
+        <symbol id="favorite-fill" viewBox="0 0 24 24">
+            <g>
+                <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
+<path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
+<path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
+<path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
+            </g>
+        </symbol>
+        <symbol id="full-screen">
+            <g>
+                <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
+                <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
+            </g>
+        </symbol>   
+    </svg>
     <!-- header -->
     <header class="header" id="header">
         <div class="container">
@@ -25,20 +100,32 @@
                 </div>
                 <nav class="nav" id="nav">
                     <ul>
-                        <li class="nav-link"><img src="src/images/person.svg" alt="person-logo"></li>
-                        <li class="nav-link"><img src="src/images/bag.svg" alt="bag-logo"></li>
-                        <li class="nav-link"><img src="src/images/favorite.svg" alt="favaritelogo"></li>
+                        <li class="nav-link">
+                            <svg class="icon">
+                                <use xlink:href="#person"></use>
+                            </svg>
+                        </li>
+                        <li class="nav-link">
+                            <svg class="icon">
+                                <use xlink:href="#favorite"></use>
+                            </svg>
+                        </li>
+                        <li class="nav-link">
+                            <svg class="icon">
+                                <use xlink:href="#bag"></use>
+                            </svg>
+                        </li>
                     </ul>
                 </nav>
                 <!-- burger -->
                 <ul class="nav__list" data-nav>
                     <li class="nav__item"><a href="" class="nav__link">постельное белье</a></li>
                     <li class="nav__item"><a href="" class="nav__link">одежда для дома</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">Одежда для улицы</a></li> 
+                    <li class="nav__item"><a href="" class="nav__link">Одежда для улицы</a></li>
                     <li class="nav__item"><a href="" class="nav__link">ВЫход</a></li>
                 </ul>
                 <button class="burger" data-burger aria-label="Open menu" aria-expanded="false">
-                    <span class="burger_line"></span>
+                    <span class="burger-line"></span>
                 </button>
             </section>
         </div>
@@ -54,15 +141,20 @@
                             <div class="card">
                                 <div class="card-slider">
                                     <div class="card-slider__nav slider__nav">
-                                        <div class="slider__nav-item"><img src="src/images/slider/preview1.png" alt="preview1">
+                                        <div class="slider__nav-item"><img src="src/images/slider/preview1.png"
+                                                alt="preview1">
                                         </div>
-                                        <div class="slider__nav-item"><img src="src/images/slider/preview2.png" alt="preview2">
+                                        <div class="slider__nav-item"><img src="src/images/slider/preview2.png"
+                                                alt="preview2">
                                         </div>
-                                        <div class="slider__nav-item"><img src="src/images/slider/preview3.png" alt="preview3">
+                                        <div class="slider__nav-item"><img src="src/images/slider/preview3.png"
+                                                alt="preview3">
                                         </div>
-                                        <div class="slider__nav-item"><img src="src/images/slider/preview4.png" alt="preview4">
+                                        <div class="slider__nav-item"><img src="src/images/slider/preview4.png"
+                                                alt="preview4">
                                         </div>
-                                        <div class="slider__nav-item"><img src="src/images/slider/preview5.png" alt="preview5">
+                                        <div class="slider__nav-item"><img src="src/images/slider/preview5.png"
+                                                alt="preview5">
                                         </div>
                                     </div>
                                     <div class="card-slider__block slider__block">
@@ -88,11 +180,21 @@
                                 <div class="display-reviews">
                                     <h4>Отзывы</h4>
                                     <span class="display-raiting">
-                                        <img src="src/images/icon_star_fill.svg" alt="">
-                                        <img src="src/images/icon_star_fill.svg" alt="">
-                                        <img src="src/images/icon_star_fill.svg" alt="">
-                                        <img src="src/images/icon_star_fill.svg" alt="">
-                                        <img src="src/images/icon_star.svg" alt="">
+                                        <svg class="star">
+                                            <use xlink:href="#star-fill"></use>
+                                        </svg>
+                                        <svg class="star">
+                                            <use xlink:href="#star-fill"></use>
+                                        </svg>
+                                        <svg class="star">
+                                            <use xlink:href="#star-fill"></use>
+                                        </svg>
+                                        <svg class="star">
+                                            <use xlink:href="#star-fill"></use>
+                                        </svg>
+                                        <svg class="star">
+                                            <use xlink:href="#star-stroke"></use>
+                                        </svg>
                                     </span>
                                     <h4>14 отзывов</h4>
                                     <span><img src="src/images/arrow right swipe.svg" alt=""></span>
@@ -140,11 +242,10 @@
                                     </div>
                                     <div class="btn-block">
                                         <button class="add-btn">Добавить в корзину</button>
-                                        <div class="favorite-btn">
-                                            <img src="src/images/favorite-white.svg" alt="">
-                                        </div>
+                                        <svg class="favorite-btn">
+                                            <use xlink:href="#favorite-white"></use>
+                                        </svg>
                                     </div>
-
                                 </div>
                                 <div class="block-link">
                                     <a class="link-text" href="#">Купить в 1 клик</a>
@@ -189,18 +290,129 @@
                 <div class="styles__header">
                     <a class="header-link" href="#">Посмотреть все стили</a>
                 </div>
-                <div class="styles__centr">
-                    <div class="styles__left">
-                        <div class="left-img">
-                            <img src="src/images/styles1.png" alt="">
+                <div class="styles__center">
+                    <div class="gallery__styles-big">
+                        <div class="styles__item-big">
+                            <div class="styles__item-inner">
+                                <img class="styles__item-img" src="src/images/styles1.png" alt="">
+                                <div class="styles__item-info">
+                                    <span class="styles__item-full-screen">
+                                        <svg class="full-screen">
+                                            <use xlink:href="#full-screen"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="styles__item-icon">
+                                        <svg class="bag-white">
+                                            <use xlink:href="#bag-white"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="styles__item-title">Узнать что на мне</span>
+                                    <span class="styles__item-icon-favorite">
+                                        <svg class="favorite-fill">
+                                            <use xlink:href="#favorite-fill"></use>
+                                        </svg>
+                                        <span>200</span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="styles__right">
-                        <div class="right-img">
-                            <img src="src/images/styles2.png" alt="">
-                            <img src="src/images/styles3.png" alt="">
-                            <img src="src/images/styles4.png" alt="">
-                            <img src="src/images/styles5.png" alt="">
+                    <div class="gallery__styles">
+                        <div class="styles__item">
+                            <div class="styles__item-inner">
+                                <img class="styles__item-img" src="src/images/styles2.png" alt="">
+                                <div class="styles__item-info">
+                                    <span class="styles__item-full-screen">
+                                        <svg class="full-screen">
+                                            <use xlink:href="#full-screen"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="styles__item-icon">
+                                        <svg class="bag-white">
+                                            <use xlink:href="#bag-white"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="styles__item-title">Узнать что на мне</span>
+                                    <span class="styles__item-icon-favorite">
+                                        <svg class="favorite-fill">
+                                            <use xlink:href="#favorite-fill"></use>
+                                        </svg>
+                                        <span>200</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="styles__item">
+                            <div class="styles__item-inner">
+                                <img class="styles__item-img" src="src/images/styles3.png" alt="">
+                                <div class="styles__item-info">
+                                    <span class="styles__item-full-screen">
+                                        <svg class="full-screen">
+                                            <use xlink:href="#full-screen"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="styles__item-icon">
+                                        <svg class="bag-white">
+                                            <use xlink:href="#bag-white"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="styles__item-title">Узнать что на мне</span>
+                                    <span class="styles__item-icon-favorite">
+                                        <svg class="favorite-fill">
+                                            <use xlink:href="#favorite-fill"></use>
+                                        </svg>
+                                        <span>200</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="styles__item">
+                            <div class="styles__item-inner">
+                                <img class="styles__item-img" src="src/images/styles4.png" alt="">
+                                <div class="styles__item-info">
+                                    <span class="styles__item-full-screen">
+                                        <svg class="full-screen">
+                                            <use xlink:href="#full-screen"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="styles__item-icon">
+                                        <svg class="bag-white">
+                                            <use xlink:href="#bag-white"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="styles__item-title">Узнать что на мне</span>
+                                    <span class="styles__item-icon-favorite">
+                                        <svg class="favorite-fill">
+                                            <use xlink:href="#favorite-fill"></use>
+                                        </svg>
+                                        <span>200</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="styles__item">
+                            <div class="styles__item-inner">
+                                <img class="styles__item-img" src="src/images/styles5.png" alt="">
+                                <div class="styles__item-info">
+                                    <span class="styles__item-full-screen">
+                                        <svg class="full-screen">
+                                            <use xlink:href="#full-screen"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="styles__item-icon">
+                                        <svg class="bag-white">
+                                            <use xlink:href="#bag-white"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="styles__item-title">Узнать что на мне</span>
+                                    <span class="styles__item-icon-favorite">
+                                        <svg class="favorite-fill">
+                                            <use xlink:href="#favorite-fill"></use>
+                                        </svg>
+                                        <span>200</span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -243,7 +455,7 @@
                             Узнайте первыми о новинках и акциях
                         </div>
                         <div class="footer__subcribe">
-                            <input class="footer__input" type="mail" placeholder="Адрес электронной почты">
+                            <input class="footer__input" type="email" placeholder="Адрес электронной почты">
                             <button class="footer__btn">Подписаться</button>
                         </div>
                     </div>
