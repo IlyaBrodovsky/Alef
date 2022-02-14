@@ -951,7 +951,8 @@ input::placeholder {
   }
 
   #snackbar {
-    margin-left: -224px;
+    margin-left: -164px;
+    width: 303px;
   }
   .footer__list ul > li {
     font-size: 14px;
