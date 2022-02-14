@@ -318,6 +318,7 @@ input[type="text"] {
   padding: 12px;
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
 }
 .current {
   display: flex;
@@ -338,6 +339,7 @@ input[type="text"] {
   padding: 12px;
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
 }
 .add-btn {
   height: 44px;
@@ -356,6 +358,7 @@ input[type="text"] {
   width: 44px;
   background-color: #333333;
   margin-left: 8px;
+  cursor: pointer;
 
   padding: 10px;
 }
@@ -375,7 +378,7 @@ input[type="text"] {
 #snackbar {
   visibility: hidden;
   min-width: 250px;
-  margin-left: -232px;
+  margin-left: -110px;
   background-color: #333;
   color: #fff;
   text-align: center;
@@ -385,7 +388,7 @@ input[type="text"] {
   z-index: 1;
   left: 50%;
   bottom: 30px;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 #snackbar.show {
@@ -395,23 +398,47 @@ input[type="text"] {
 }
 
 @-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;} 
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 
 @keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 
 .display__right-information {
@@ -866,7 +893,7 @@ input::placeholder {
     top: -130%;
   }
   .styles__item .full-screen {
-    top: -81%
+    top: -81%;
   }
 
   .styles__item .styles__item-title {
@@ -880,7 +907,7 @@ input::placeholder {
     width: 24px;
   }
   #snackbar {
-    width: 100%;
+    margin-left: -265px;
   }
 
   .footer__input {
@@ -915,6 +942,16 @@ input::placeholder {
   .slider__nav {
     width: 35px;
     top: 7%;
+  }
+  .styles__item-big .full-screen {
+    top: -50%;
+  }
+  .styles__item .full-screen {
+    top: -40%;
+  }
+
+  #snackbar {
+    margin-left: -224px;
   }
   .footer__list ul > li {
     font-size: 14px;
