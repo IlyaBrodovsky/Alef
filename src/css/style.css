@@ -364,7 +364,7 @@ input[type="text"] {
   width: 44px;
 }
 .favorite-btn:hover {
-  fill: red;
+  fill: #ff0000;
 }
 .btn-block {
   display: flex;
@@ -879,6 +879,9 @@ input::placeholder {
   .bag-white {
     width: 24px;
   }
+  #snackbar {
+    width: 100%;
+  }
 
   .footer__input {
     width: 100%;
@@ -912,9 +915,6 @@ input::placeholder {
   .slider__nav {
     width: 35px;
     top: 7%;
-  }
-  #snackbar {
-    width: 100%;
   }
   .footer__list ul > li {
     font-size: 14px;
