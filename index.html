@@ -122,7 +122,7 @@
                     <li class="nav__item"><a href="" class="nav__link">постельное белье</a></li>
                     <li class="nav__item"><a href="" class="nav__link">одежда для дома</a></li>
                     <li class="nav__item"><a href="" class="nav__link">Одежда для улицы</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">ВЫход</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Выход</a></li>
                 </ul>
                 <button class="burger" data-burger aria-label="Open menu" aria-expanded="false">
                     <span class="burger-line"></span>
@@ -236,17 +236,18 @@
                                 </div>
                                 <div class="display__buttons">
                                     <div class="btn-group">
-                                        <button class="plus-btn">+</button>
-                                        <div class="current">1</div>
-                                        <button class="minus-btn">-</button>
+                                        <button class="plus-btn" data-id="plus">+</button>
+                                        <input class="current" type="text" value="0"></input>
+                                        <button class="minus-btn" data-id="minus">-</button>
                                     </div>
                                     <div class="btn-block">
-                                        <button class="add-btn">Добавить в корзину</button>
-                                        <svg class="favorite-btn">
+                                        <button class="add-btn" data-id="add">Добавить в корзину</button>
+                                        <svg class="favorite-btn" data-id="favorite">
                                             <use xlink:href="#favorite-white"></use>
                                         </svg>
                                     </div>
                                 </div>
+                                <div class="block-goods" id="snackbar" data-id="goods"></div>
                                 <div class="block-link">
                                     <a class="link-text" href="#">Купить в 1 клик</a>
                                 </div>
@@ -454,9 +455,11 @@
                         <div class="footer-title">
                             Узнайте первыми о новинках и акциях
                         </div>
-                        <div class="footer__subcribe">
-                            <input class="footer__input" type="email" placeholder="Адрес электронной почты">
-                            <button class="footer__btn">Подписаться</button>
+                        <div class="footer__subscribe">
+                            <form action="/">
+                                <input class="footer__input" type="email" placeholder="Адрес электронной почты">
+                                <button class="footer__btn">Подписаться</button>
+                            </form>
                         </div>
                     </div>
                 </div>

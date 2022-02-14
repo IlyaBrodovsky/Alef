@@ -75,3 +75,67 @@ let select = function () {
 };
 
 select();
+
+// bag and favorite 
+
+let plusBtn = document.querySelector('.plus-btn');
+let minusBtn = document.querySelector('.minus-btn');
+let current = document.querySelector('.current');
+let addBtn = document.querySelector('.add-btn')
+let blockGoods = document.querySelector('.block-goods')
+let favorite = document.querySelector('.favorite-btn')
+
+document.onclick = event => {
+
+  console.log(event.target)
+  if (event.target.classList.contains('plus-btn')) {
+    plusCurrent(event.target.dataset.id)
+  }
+  if (event.target.classList.contains('minus-btn')) {
+    minusCurrent(event.target.dataset.id)
+  }
+  if (event.target.classList.contains('favorite-btn')) {
+    favoriteMessage(event.target.dataset.id)
+  }
+  if (event.target.classList.contains('add-btn')) {
+    renderCart(event.target.dataset.id)
+  }
+}
+
+function plusCurrent () {
+  current.innerHTML = current.value ++
+}
+
+function minusCurrent () {
+  if (current.value <= 0) { current = 0} 
+  current.innerHTML = current.value --
+}
+
+function favoriteMessage () {
+  blockGoods.innerHTML = 'товар артикул 213456 в количестве ' + current.value + ' добавлен в избранное'
+  myFunction()
+}
+function renderCart (){
+  blockGoods.innerHTML = 'товар артикул 213456 в количестве ' + current.value + ' добавлен в корзину'
+  myFunction()
+
+}
+
+function myFunction() {
+  let x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+addBtn.onclick = myFunction()
+
+//validate email 
+
+function ValidMail() {
+  let re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+  let myMail = document.querySelector('.footer__input').value;
+  let valid = re.test(myMail);
+  if (valid) output = 'Адрес эл. почты введен правильно!';
+  else output = 'Адрес электронной почты введен неправильно!';
+  document.getElementById('message').innerHTML = output;
+  return valid;
+}
