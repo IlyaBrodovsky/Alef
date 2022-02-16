@@ -109,18 +109,26 @@ function minusCurrent() {
 }
 
 function favoriteMessage() {
-  blockGoods.innerHTML =
-    "товар артикул 213456 в количестве " +
-    current.value +
-    " добавлен в избранное";
-  myFunction();
+  if (current.value == 0) {
+    blockGoods.innerHTML = "товар не выбран";
+  } else {
+    blockGoods.innerHTML =
+      "товар артикул 213456 в количестве " +
+      current.value +
+      " добавлен в избранное";
+    myFunction();
+  }
 }
 function renderCart() {
-  blockGoods.innerHTML =
-    "товар артикул 213456 в количестве " +
-    current.value +
-    " добавлен в корзину";
-  myFunction();
+  if (current.value == 0) {
+    blockGoods.innerHTML = "товар не выбран";
+  } else {
+    blockGoods.innerHTML =
+      "товар артикул 213456 в количестве " +
+      current.value +
+      " добавлен в корзину";
+    myFunction();
+  }
 }
 
 function myFunction() {
@@ -130,11 +138,18 @@ function myFunction() {
   }, 3000);
 }
 addBtn.onclick = myFunction;
+favorite.onclick = myFunction;
 
 //validate email
 
+function clearInput() {
+  document.querySelector(".footer__input").value = '';
+}
+document.querySelector(".close").onclick = clearInput;
+
 function ValidMail() {
-  let re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+  let re =
+    /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
   let myMail = document.querySelector(".footer__input").value;
   let valid = re.test(myMail);
   if (valid) output = "Адрес эл. почты введен правильно!";
@@ -142,3 +157,4 @@ function ValidMail() {
   document.getElementById("message").innerHTML = output;
   return valid;
 }
+
